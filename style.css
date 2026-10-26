@@ -1,0 +1,177 @@
+/* 1. Reset default spacing */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* 2. Page background and font */
+body {
+font-family: Arial, sans-serif;
+background: #f3f4f8;
+color: #222;
+min-height: 100vh;
+padding: 30px 16px;
+}
+
+/* 3. Main container */
+.container {
+max-width: 600px;
+width: 100%;
+margin: 40px auto;
+padding: 30px;
+background: white;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Heading and description */
+h1 {
+text-align: center;
+margin-bottom: 10px;
+color: #5b3cc4;
+}
+
+.container > p:first-of-type {
+text-align: center;
+margin-bottom: 25px;
+color: #666;
+}
+
+/* 5. Task form */
+#task-form {
+display: flex;
+gap: 10px;
+margin-bottom: 20px;
+}
+
+#task-input {
+flex: 1;
+min-width: 0;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-size: 16px;
+}
+
+#task-input:focus {
+outline: 2px solid #8c73e6;
+border-color: #5b3cc4;
+}
+
+#task-form button {
+padding: 12px 16px;
+border: none;
+border-radius: 6px;
+background: #5b3cc4;
+color: white;
+cursor: pointer;
+}
+
+#task-form button:hover {
+background: #4529a5;
+}
+
+/* 6. Filter buttons */
+.task-filters {
+display: flex;
+gap: 10px;
+margin-bottom: 20px;
+}
+
+.filter-btn {
+flex: 1;
+padding: 10px;
+border: 1px solid #5b3cc4;
+border-radius: 6px;
+background: white;
+color: #5b3cc4;
+cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+background: #5b3cc4;
+color: white;
+}
+
+/* 7. Task count */
+#task-count {
+margin-bottom: 15px;
+color: #555;
+}
+
+/* 8. Task list */
+#task-list {
+list-style: none;
+}
+
+.task-item {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 10px;
+padding: 12px;
+background: #f8f7fc;
+border: 1px solid #e5e1f5;
+border-radius: 6px;
+}
+
+.task-item span {
+flex: 1;
+overflow-wrap: anywhere;
+}
+
+.task-item.completed span {
+text-decoration: line-through;
+color: #888;
+}
+
+.task-item button {
+padding: 7px 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.complete-btn {
+background: #d9f5e5;
+color: #176b3a;
+}
+
+.delete-btn {
+background: #ffe1e1;
+color: #a51d1d;
+}
+
+/* 9. Mobile responsiveness */
+@media (max-width: 480px) {
+.container {
+padding: 20px 15px;
+margin: 15px auto;
+}
+
+#task-form {
+    flex-direction: column;
+}
+
+#task-form button {
+    width: 100%;
+}
+
+.task-filters {
+    gap: 6px;
+}
+
+.filter-btn {
+    padding: 9px 5px;
+    font-size: 13px;
+}
+
+.task-item {
+    flex-wrap: wrap;
+}
+
+
+}
